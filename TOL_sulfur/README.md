@@ -23,7 +23,7 @@ Individual genomes were annotated by Prodigal and all proteins were concatenated
 
 **3 Parse the hmmsearch result and grasp DsrAB, Sdo proteins for further phylogenetic tree-based validation**
 
-Make "HMM_result.txt" to store the result. It contains all HMM in the first column and all genomes in the first row. 
+Make "HMM_result.original.txt" to store the result. It contains all HMM in the first column and all genomes in the first row. 
 
 [script] 02.parse_hmmsearch_result_and_grasp_DsrAB_and_Sdo_proteins.pl
 
@@ -45,15 +45,41 @@ DsrA sequences (both reference and DsrA hits from this study) and DsrB sequences
 
 [script] 04.make_DsrAB_tree.pl
 
-6 
+**6 Replace the tip name of DsrAB tree**
 
+Use both the genome ID and taxonomy to replace the genome ID in the tree generated from Step 5.
 
+[script] 05.replace_DsrAB_tree_tips.pl
 
-**7 Align Sdo sequences, and make the phylogenetic tree**
+**7 Re-assign the Dsr function by Dsr operon**
+
+Re-assign the Dsr function ("oxidative Dsr", "reductive Dsr", or "both") by Dsr operon (the assignment of DsrAB direction from the phylogenetic tree and existence of Dsr operon components). The following rule was adopted:
+
+<img src="D:\Side_Project\UW-Madison\Karthik\Nature_Reviews_Microbiology_with_PT\Bioinformatic_analysis\TOL_sulfur\Dsr_direction_rule.jpg" alt="Dsr_direction_rule" style="zoom:80%;" />
+
+[script] 06.re-assign_Dsr_function.pl
+
+**8 Align Sdo sequences, and make the phylogenetic tree**
 
 Align them with Sdo reference sequences, and make the phylogenetic tree
 
-[script] 06.make_Sdo_tree.pl
+[script] 07.make_Sdo_tree.pl
+
+**9 Find positive Sdo hits**
+
+Find positive Sdo hits through two conserved sites, hETHE1 Asp196 and Asn244 (Reference: Fig. 2 in Appl Environ Microbiol. 2014 Mar;80(5):1799-806. doi: 10.1128/AEM.03281-13) 
+
+[script] 08.find_positive_Sdo_hits.pl
+
+**10 Conduct statistical analysis to sulfur metabolic functions**
+
+Conduct statistical analysis to get the final sulfur metabolic function distribution across all genomes and across all classes.
+
+The dependent files include "Sulfur_metabolic_function2HMM_template.txt" (Function to HMM template file), "HMM_result.original.txt" (intermediate result file from Step 3), "GTDBTK_DB_release202/ar122_taxonomy_r202.tsv" (GTDB archaeal MAG taxonomy result), "GTDBTK_DB_release202/bac120_taxonomy_r202.tsv" (GTDB bacterial MAG taxonomy result), "Dsr_function_summary.txt" (intermediate result file from Step 7), and "Sdo_positive_hits.txt" (intermediate result file from Step 9).
+
+The output files include "Sulfur_metabolic_function.txt" and "Sulfur_metabolic_function.for_class.txt".
+
+[script] 09.do_statistical_analysis_to_sulfur_metabolic_functions.pl
 
 
 

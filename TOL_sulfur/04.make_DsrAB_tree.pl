@@ -54,10 +54,14 @@ my %DsrB_hits_and_ref = _store_seq("Dsr_analysis/dsrB.hits_and_ref.faa.mafft");
 
 my %DsrAB_hits_and_ref = ();
 foreach my $key (sort keys %DsrA_hits_and_ref){
-	my $seq1 = $DsrA_hits_and_ref{$key};
-	my $seq2 = $DsrB_hits_and_ref{$key};
-	my $seq_concat = $seq1.$seq2;
-	$DsrAB_hits_and_ref{$key} = $seq_concat;
+	my $seq1 = "";
+	my $seq2 = "";
+	$seq1 = $DsrA_hits_and_ref{$key};
+	$seq2 = $DsrB_hits_and_ref{$key};
+	if ($seq1 and $seq2){ # Only store pairs that are distributed in both files
+		my $seq_concat = $seq1.$seq2;
+		$DsrAB_hits_and_ref{$key} = $seq_concat;
+	}
 }
 
 open OUT, ">Dsr_analysis/dsrAB.hits_and_ref.faa.mafft";

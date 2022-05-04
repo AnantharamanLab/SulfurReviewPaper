@@ -1,0 +1,9 @@
+Function	HMM presence
+Sulfide oxidation	K17229,K17218
+Sulfur reduction	K16952,K17219,K17220,K17221
+Sulfur oxidation	oxidative Dsr,K17725,K16952
+Sulfite oxidation/Sulfate reduction	K00394,K00395,K00958
+Sulfite reduction	reductive Dsr,K16950,K16951,K00385
+Thiosulfate oxidation	K17223,K17226,K17227,K17222;K17225,K22622
+Thiosulfate disproportionation (phsA)	K08352
+Thiosulfate disproportionation (sox)	K17223,K17226,K17227,K17222;NO|K17225,NO|K22622
