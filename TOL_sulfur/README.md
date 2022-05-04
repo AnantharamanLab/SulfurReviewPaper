@@ -31,7 +31,7 @@ Make "HMM_result.original.txt" to store the result. It contains all HMM in the f
 
 Parse to get DsrAB pair information. Manually curate the results based on the following method:
 
-Criteria to choose DsrAB in the same scaffold:
+Criteria to choose DsrAB on the same scaffold:
 
 1) Firstly pick DsrAB next to each other
 
