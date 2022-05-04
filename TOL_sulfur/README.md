@@ -55,7 +55,7 @@ Use both the genome ID and taxonomy to replace the genome ID in the tree generat
 
 Re-assign the Dsr function ("oxidative Dsr", "reductive Dsr", or "both") by Dsr operon (the assignment of DsrAB direction from the phylogenetic tree and existence of Dsr operon components). The following rule was adopted:
 
-<img src="D:\Side_Project\UW-Madison\Karthik\Nature_Reviews_Microbiology_with_PT\Bioinformatic_analysis\TOL_sulfur\Dsr_direction_rule.jpg" alt="Dsr_direction_rule" style="zoom:80%;" />
+<img src="https://github.com/AnantharamanLab/SulfurReviewPaper/blob/main/TOL_sulfur/Dsr_direction_rule.jpg" style="zoom:80%;" />
 
 [script] 06.re-assign_Dsr_function.pl
 
