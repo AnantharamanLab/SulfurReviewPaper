@@ -81,6 +81,12 @@ The output files include "Sulfur_metabolic_function.txt" and "Sulfur_metabolic_f
 
 [script] 09.do_statistical_analysis_to_sulfur_metabolic_functions.pl
 
+**11 Make phylogenetic tree for each class**
+
+We picked one representative genome from each class to build the phylogenetic tree.  We used the statistical analysis result of sulfur metabolic function generated from the last step to annotate the tree.  There were 26 tips of archaeal classes, and 105 tips of bacterial classes (proteobacterial groups were classified into the class level, while other bacterial taxa were classified into the phylum level).
+
+[script] 10.make_phylogenomic_tree_for_each_class.pl
+
 
 
 
