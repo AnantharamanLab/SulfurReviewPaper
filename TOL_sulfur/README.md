@@ -73,7 +73,7 @@ Find positive Sdo hits through two conserved sites, hETHE1 Asp196 and Asn244 (Re
 
 **10 Conduct statistical analysis to sulfur metabolic functions**
 
-Conduct statistical analysis to get the final sulfur metabolic function distribution across all genomes and across all classes.
+Conduct statistical analysis to get the final sulfur metabolic function distribution across all genomes and across all classes (for Bacteria, it is phyla except for Proteobacteria).
 
 The dependent files include "Sulfur_metabolic_function2HMM_template.txt" (Function to HMM template file), "HMM_result.original.txt" (intermediate result file from Step 3), "GTDBTK_DB_release202/ar122_taxonomy_r202.tsv" (GTDB archaeal MAG taxonomy result), "GTDBTK_DB_release202/bac120_taxonomy_r202.tsv" (GTDB bacterial MAG taxonomy result), "Dsr_function_summary.txt" (intermediate result file from Step 7), and "Sdo_positive_hits.txt" (intermediate result file from Step 9).
 
@@ -86,6 +86,12 @@ The output files include "Sulfur_metabolic_function.txt" and "Sulfur_metabolic_f
 We picked one representative genome from each class to build the phylogenetic tree.  We used the statistical analysis result of sulfur metabolic function generated from the last step to annotate the tree.  There were 26 tips of archaeal classes, and 105 tips of bacterial classes (proteobacterial groups were classified into the class level, while other bacterial taxa were classified into the phylum level).
 
 [script] 10.make_phylogenomic_tree_for_each_class.pl
+
+**12 Count GTDB species number for each class**
+
+We count the GTDB species numbers for each class (131 taxa in total; 26 taxa of archaeal classes, 105 taxa of bacterial phyla or classes).
+
+[script] 11.count_species_num_for_each_class.pl
 
 
 
