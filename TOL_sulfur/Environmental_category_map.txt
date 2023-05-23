@@ -1,0 +1,28 @@
+Air	Air
+Aquifer	Deep subsurface and aquifer
+Cave	Terrestrial, cave, and glacial
+Compost	Engineered
+Deep subsurface	Deep subsurface and aquifer
+Engineered	Engineered
+Food-associated	Engineered
+Freshwater	Freshwater
+Glacial	Terrestrial, cave, and glacial
+Human	Human and mammals
+Human: airways	Human and mammals
+Human: blood	Human and mammals
+Human: gut	Human and mammals
+Human: oral	Human and mammals
+Human: skin	Human and mammals
+Human: urogenital tract	Human and mammals
+Human: vagina	Human and mammals
+Hydrothermal vents	Hydrothermal vents and thermal springs
+Mammals: blood	Human and mammals
+Mammals: gut	Human and mammals
+Marine	Marine
+other host-associated	other host-associated
+Plants: rhizoplane	Plants: rhizoplane
+Saline and alkaline	Saline and alkaline
+Soil	Soil and wetlands 
+Terrestrial	Terrestrial, cave, and glacial
+Thermal springs	Hydrothermal vents and thermal springs
+Wetlands	Soil and wetlands 

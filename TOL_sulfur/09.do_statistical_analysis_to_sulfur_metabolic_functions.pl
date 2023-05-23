@@ -252,8 +252,7 @@ close OUT;
 
 # Step 10 Make %Sulfur_metabolic_function2mag_class2presence hash
 my %MAG_class = (); # $mag_class => collection of $mag, separated by "\t"
-                    # When it is an archaeal MAG or Proteobacteria MAG, we classified it into class level
-					# When it is a bacterial MAG, we classified it into phylum level
+                    # For Bacteria, we classified it into phylum level, except for Proteobacteria
 foreach my $mag (sort keys %MAGs_filtered){
 	my $tax = $MAG2tax{$mag};
 	my $mag_class = "";

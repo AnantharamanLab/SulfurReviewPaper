@@ -89,15 +89,31 @@ We picked one representative genome from each class to build the phylogenetic tr
 
 **12 Count GTDB species number for each class**
 
-We count the GTDB species numbers for each class (131 taxa in total; 26 taxa of archaeal classes, 105 taxa of bacterial phyla or classes).
+We counted the GTDB species numbers for each class (131 taxa in total; 26 taxa of archaeal classes, 105 taxa of bacterial phyla or classes).
 
 [script] 11.count_species_num_for_each_class.pl
 
+**13 Get the isolation information for each class's species representatives**
 
+We parsed the metadata to get the isolation information for each class's species representatives.
 
+[script] 12.get_isolate_information_for_each_class_species_reps.py
 
+**14 Get the BioSample IDs from genome accessions**   
 
+Use the metadata to get the corresponding BioSample IDs from genome accessions
 
+[script] 13.get_biosample_from_genome_accessions.py
+
+**15** **Get environmental distribution result for each class** 
+
+After we manually assigned the environmental category to each species representative from its isolation information, we summarized the environmental distribution result for each class. 
+
+If any species representatives are found in a specific environmental category, we assign "1" to the corresponding class. Here, we only took the species representatives into consideration.
+
+The 4th column of "Species_rep2Isolation_mdfed.txt" is the corresponding environment (lower level). Then by using "Environmental_category_map.txt", we could find the environmental category for each species representative.
+
+[script] 14.summarize_each_class_environmental_distribution.py
 
 
 

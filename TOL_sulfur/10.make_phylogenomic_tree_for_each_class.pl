@@ -5,7 +5,7 @@ use warnings;
 
 # Aim: Make phylogenomic tree for each class (131 tips in total; 26 tips of archaeal classes, 105 tips of bacterial classes)
 # Note: This script should be run under the conda env of IQTREE_v2.1.4. To activate it, run "conda activate IQTREE_v2.1.4"
-=pod
+
 # Step 1 Store MAG2tax hash
 my %MAG2tax = (); # $mag => $tax
 open IN, "GTDBTK_DB_release202/ar122_taxonomy_r202.tsv";
@@ -154,7 +154,7 @@ foreach my $bac_mag (sort keys %Bac_class_map){
 # Step 7 Run IQTREE
 `trimal -in Arc_class2msa.faa -out Arc_class2msa.gt25perc -gt 0.25`;
 `iqtree -m TESTMERGE -bb 1000 -bnni -nt AUTO -s Arc_class2msa.gt25perc -pre Arc_class2msa.gt25perc`;
-=cut
+
 `trimal -in Bac_class2msa.faa -out Bac_class2msa.gt25perc -gt 0.25`;
 `iqtree -m TESTMERGE -bb 1000 -bnni -nt AUTO -s Bac_class2msa.gt25perc -pre Bac_class2msa.gt25perc`;
 
