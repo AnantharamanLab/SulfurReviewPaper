@@ -22,7 +22,7 @@ Marine	Marine
 other host-associated	other host-associated
 Plants: rhizoplane	Plants: rhizoplane
 Saline and alkaline	Saline and alkaline
-Soil	Soil and wetlands 
+Soil	Soil and wetlands
 Terrestrial	Terrestrial, cave, and glacial
 Thermal springs	Hydrothermal vents and thermal springs
-Wetlands	Soil and wetlands 
+Wetlands	Soil and wetlands
