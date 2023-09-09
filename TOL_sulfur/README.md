@@ -2,7 +2,7 @@
 
 ------
 
-**[*PS*]** The working dir in our server is "/storage1/data10/SulfurReviewPaper/TOL_sulfur". The data we used to perform this analysis is based on GTDB release 202, which is a public database open for everyone. 
+**[*PS*]** The working dir in our server is "/storage1/data10/SulfurReviewPaper/TOL_sulfur". The data we used to perform this analysis is based on GTDB release 202, which is a public database open to everyone. 
 
 **1** **Prepare sulfur metabolism HMMs**
 
