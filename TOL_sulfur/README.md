@@ -21,7 +21,7 @@ Individual genomes were annotated by Prodigal and all proteins were concatenated
 
 [script] 01.run_hmmsearch_on_GTDB_release202_species_rep_genomes.pl
 
-**3 Parse the hmmsearch result and grasp DsrAB, Sdo proteins for further phylogenetic tree-based validation**
+**3 Parse the hmmsearch result and select DsrAB, Sdo proteins for further phylogenetic tree-based validation**
 
 Make "HMM_result.original.txt" to store the result. It contains all HMM in the first column and all genomes in the first row. 
 
