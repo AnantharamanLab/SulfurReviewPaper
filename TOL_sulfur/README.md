@@ -2,7 +2,7 @@
 
 ------
 
-PS: The working dir in our server is "/storage1/data10/SulfurReviewPaper/TOL_sulfur"
+**[*PS*]** The working dir in our server is "/storage1/data10/SulfurReviewPaper/TOL_sulfur". The data we used to perform this analysis is based on GTDB release 202, which is a public database open for everyone. 
 
 **1** **Prepare sulfur metabolism HMMs**
 
@@ -15,7 +15,7 @@ NC cutoffs were all written into individual HMMs. All HMMs were provided in the 
 
 **2 Run hmmsearch for GTDB_release202_species_rep_genomes**
 
-The GTDB release202 species rep genomes were downloaded from the [database](https://data.gtdb.ecogenomic.org/releases/release202/202.0/).
+The GTDB release 202 species rep genomes were downloaded from the [database](https://data.gtdb.ecogenomic.org/releases/release202/202.0/).
 
 Individual genomes were annotated by Prodigal and all proteins were concatenated into "concat_gtdbtk_genomes2.faa". The concat protein file was used for hmmsearch
 
