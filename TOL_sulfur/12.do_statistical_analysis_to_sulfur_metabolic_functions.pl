@@ -89,7 +89,18 @@ while (<IN>){
 }
 close IN;
 
-# Step 5 Merge the Dsr and Sdo hit presence info into %HMM_result
+# Step 5 Store the %MAG2sHdr hash
+my %MAG2sHdr = (); # $mag => 1; indicates whether a MAG contains sHdr operon or not 
+open IN, "sHdr_operon_results.txt";
+while (<IN>){
+	chomp;
+	my $line = $_;
+	my ($mag) = $line =~ /^(GC.\_.+?)\t/;
+	$MAG2sHdr{$mag} = 1;
+}
+close IN;
+
+# Step 6 Merge the Dsr, Sdo, sHdr hit presence info into %HMM_result
 foreach my $mag (sort keys %MAGs){
 	if (exists $MAG2Dsr_function{$mag}{"oxidative Dsr"}){
 		$HMM_result{"oxidative Dsr"}{$mag} = 1;
@@ -108,6 +119,12 @@ foreach my $mag (sort keys %MAGs){
 	}else{
 		$HMM_result{"K17725"}{$mag} = 0;
 	}
+	
+	if (exists $MAG2sHdr{$mag}){
+		$HMM_result{"sHdr"}{$mag} = 1;
+	}else{
+		$HMM_result{"sHdr"}{$mag} = 0;
+	}	
 }
 
 # Step 6 Store the %Sulfur_metabolic_function2HMM_template hash

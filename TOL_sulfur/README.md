@@ -71,41 +71,61 @@ Find positive Sdo hits through two conserved sites, hETHE1 Asp196 and Asn244 (Re
 
 [script] 08.find_positive_Sdo_hits.pl
 
-**10 Conduct statistical analysis to sulfur metabolic functions**
+**10 Use the faa file to make gff files for all species rep genomes**
+
+We use the faa files from all species rep genomes to make corresponding gff files. The gff files will be used as the input for running [HMSS2 software](https://github.com/TSTanabe/HMSS2) to identify the sHdr operon.
+
+[script] 
+
+09.make_gff_files_for_all_species_rep_genomes.py
+
+**11 Run HMSS2 on all species rep genomes**
+
+Use default settings to run HMSS2 on all species rep genomes.
+
+[script] 10.run_HMSS2.sh
+
+**12 Parse the HMSS2 result to get sHdr operon distribution result**
+
+Check if any genomes have the four patterns of sHdr operons and the maximum gene distance within the operon should be less 20. 
+
+[script] 11.get_sHdr_operon_from_HMSS2_result.py
+
+**13 Conduct statistical analysis to sulfur metabolic functions**
 
 Conduct statistical analysis to get the final sulfur metabolic function distribution across all genomes and across all classes (for Bacteria, it is phyla except for Proteobacteria).
 
-The dependent files include "Sulfur_metabolic_function2HMM_template.txt" (Function to HMM template file), "HMM_result.original.txt" (intermediate result file from Step 3), "GTDBTK_DB_release202/ar122_taxonomy_r202.tsv" (GTDB archaeal MAG taxonomy result), "GTDBTK_DB_release202/bac120_taxonomy_r202.tsv" (GTDB bacterial MAG taxonomy result), "Dsr_function_summary.txt" (intermediate result file from Step 7), and "Sdo_positive_hits.txt" (intermediate result file from Step 9).
+The dependent files include "Sulfur_metabolic_function2HMM_template.txt" (Function to HMM template file), "HMM_result.original.txt" (intermediate result file from Step 3), "GTDBTK_DB_release202/ar122_taxonomy_r202.tsv" (GTDB archaeal MAG taxonomy result), "GTDBTK_DB_release202/bac120_taxonomy_r202.tsv" (GTDB bacterial MAG taxonomy result), "Dsr_function_summary.txt" (intermediate result file from Step 7), "Sdo_positive_hits.txt" (intermediate result file from Step 9), and "sHdr_operon_results.txt" (intermediate result from Step 18)
 
 The output files include "Sulfur_metabolic_function.txt" and "Sulfur_metabolic_function.for_class.txt".
 
-[script] 09.do_statistical_analysis_to_sulfur_metabolic_functions.pl
+[script] 12.do_statistical_analysis_to_sulfur_metabolic_functions.pl
 
-**11 Make phylogenetic tree for each class**
+**14 Make phylogenetic tree for each class**
 
-We picked one representative genome from each class to build the phylogenetic tree.  We used the statistical analysis result of sulfur metabolic function generated from the last step to annotate the tree.  There were 26 tips of archaeal classes, and 105 tips of bacterial classes (proteobacterial groups were classified into the class level, while other bacterial taxa were classified into the phylum level).
+We picked one representative genome from each class to build the phylogenetic tree.  We used the statistical analysis result of sulfur metabolic function generated from the last step to annotate the tree.  There were 26 tips of archaeal classes, and 105 tips of bacterial phyla (proteobacterial groups were classified into the class level, while other bacterial taxa were classified into the phylum level).
 
-[script] 10.make_phylogenomic_tree_for_each_class.pl
+[script] 13.make_phylogenomic_tree_for_each_class.pl
 
-**12 Count GTDB species number for each class**
+**15 Count GTDB species number for each class**
 
 We counted the GTDB species numbers for each class (131 taxa in total; 26 taxa of archaeal classes, 105 taxa of bacterial phyla or classes).
 
-[script] 11.count_species_num_for_each_class.pl
+[script] 14.count_species_num_for_each_class.pl
 
-**13 Get the isolation information for each class's species representatives**
+**16 Get the isolation information for each class's species representatives**
 
 We parsed the metadata to get the isolation information for each class's species representatives.
 
-[script] 12.get_isolate_information_for_each_class_species_reps.py
+[script] 15.get_isolate_information_for_each_class_species_reps.py
 
-**14 Get the BioSample IDs from genome accessions**   
+**17 Get the BioSample IDs from genome accessions**   
 
 Use the metadata to get the corresponding BioSample IDs from genome accessions
 
-[script] 13.get_biosample_from_genome_accessions.py
+[script] 16.get_biosample_from_genome_accessions.py
 
-**15** **Get environmental distribution result for each class** 
+**18** **Get environmental distribution result for each class** 
 
 After we manually assigned the environmental category to each species representative from its isolation information, we summarized the environmental distribution result for each class. 
 
@@ -113,7 +133,9 @@ If any species representatives are found in a specific environmental category, w
 
 The 4th column of "Species_rep2Isolation_mdfed.txt" is the corresponding environment (lower level). Then by using "Environmental_category_map.txt", we could find the environmental category for each species representative.
 
-[script] 14.summarize_each_class_environmental_distribution.py
+[script] 17.summarize_each_class_environmental_distribution.py
+
+
 
 
 

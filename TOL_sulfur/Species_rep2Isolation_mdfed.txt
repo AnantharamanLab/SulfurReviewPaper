@@ -47305,3 +47305,21 @@ GCA_001884825.1	d__Bacteria;p__Firmicutes	ZC4 (Zoo Composter number 4) at the Sa
 GCF_000183665.1	d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria	zebra chip-infected potato field	other host-associated
 GCA_000512675.1	d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria	zooids of the marine tunicate Lissoclinum patella animal L6 collected in the eastern fields region off the coast of Papua New Guinea	other host-associated
 GCF_000272045.2	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria	zooplankton collected from plum island	other host-associated
+GCA_014240255.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_001875365.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	marine water	Marine
+GCA_002687355.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_002509225.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_002506485.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_002724775.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_902531985.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_902533295.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_001875345.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	marine water	Marine
+GCA_001875425.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	marine water	Marine
+GCA_002731655.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_002497685.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_002509165.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_003193815.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_002718915.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_014240055.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_002731905.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	
+GCA_902627615.1	d__Archaea;p__Thermoplasmatota;c__Poseidoniia_B	none	

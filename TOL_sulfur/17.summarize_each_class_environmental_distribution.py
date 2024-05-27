@@ -13,7 +13,7 @@ except Exception as e:
     sys.stderr.write(str(e) + "\n\n")
     exit(1)
     
-# Aim: Get environmental distribution result for each class (131 tips in total; 26 tips of archaeal classes, 105 tips of bacterial classes)
+# Aim: Get environmental distribution result for each class (131 tips in total; 27 tips of archaeal classes, 105 tips of bacterial classes)
 # Note: If any species representatives (here, abbreviated as "species") are found in a specific environmental category, we assign "1" to the corresponding class
 
 

@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-# Aim: Make phylogenomic tree for each class (131 tips in total; 26 tips of archaeal classes, 105 tips of bacterial classes)
+# Aim: Make phylogenomic tree for each class (131 tips in total; 27 tips of archaeal classes, 105 tips of bacterial classes)
 # Note: This script should be run under the conda env of IQTREE_v2.1.4. To activate it, run "conda activate IQTREE_v2.1.4"
 
 # Step 1 Store MAG2tax hash
