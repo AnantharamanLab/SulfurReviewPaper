@@ -87,7 +87,7 @@ Use default settings to run HMSS2 on all species rep genomes.
 
 **12 Parse the HMSS2 result to get sHdr operon distribution result**
 
-Check if any genomes have the four patterns of sHdr operons and the maximum gene distance within the operon should be less 20. 
+Check if any genomes have the four patterns of sHdr operons and the maximum gene distance within the operon should be less  than 20. 
 
 [script] 11.get_sHdr_operon_from_HMSS2_result.py
 
@@ -95,7 +95,7 @@ Check if any genomes have the four patterns of sHdr operons and the maximum gene
 
 Conduct statistical analysis to get the final sulfur metabolic function distribution across all genomes and across all classes (for Bacteria, it is phyla except for Proteobacteria).
 
-The dependent files include "Sulfur_metabolic_function2HMM_template.txt" (Function to HMM template file), "HMM_result.original.txt" (intermediate result file from Step 3), "GTDBTK_DB_release202/ar122_taxonomy_r202.tsv" (GTDB archaeal MAG taxonomy result), "GTDBTK_DB_release202/bac120_taxonomy_r202.tsv" (GTDB bacterial MAG taxonomy result), "Dsr_function_summary.txt" (intermediate result file from Step 7), "Sdo_positive_hits.txt" (intermediate result file from Step 9), and "sHdr_operon_results.txt" (intermediate result from Step 18)
+The dependent files include "Sulfur_metabolic_function2HMM_template.txt" (Function to HMM template file), "HMM_result.original.txt" (intermediate result file from Step 3), "GTDBTK_DB_release202/ar122_taxonomy_r202.tsv" (GTDB archaeal MAG taxonomy result), "GTDBTK_DB_release202/bac120_taxonomy_r202.tsv" (GTDB bacterial MAG taxonomy result), "Dsr_function_summary.txt" (intermediate result file from Step 7), "Sdo_positive_hits.txt" (intermediate result file from Step 9), and "sHdr_operon_results.txt" (intermediate result from Step 12)
 
 The output files include "Sulfur_metabolic_function.txt" and "Sulfur_metabolic_function.for_class.txt".
 
@@ -103,13 +103,13 @@ The output files include "Sulfur_metabolic_function.txt" and "Sulfur_metabolic_f
 
 **14 Make phylogenetic tree for each class**
 
-We picked one representative genome from each class to build the phylogenetic tree.  We used the statistical analysis result of sulfur metabolic function generated from the last step to annotate the tree.  There were 26 tips of archaeal classes, and 105 tips of bacterial phyla (proteobacterial groups were classified into the class level, while other bacterial taxa were classified into the phylum level).
+We picked one representative genome from each class to build the phylogenetic tree.  We used the statistical analysis result of sulfur metabolic function generated from the last step to annotate the tree.  There were 27 tips of archaeal classes, and 105 tips of bacterial phyla (proteobacterial groups were classified into the class level, while other bacterial taxa were classified into the phylum level).
 
 [script] 13.make_phylogenomic_tree_for_each_class.pl
 
 **15 Count GTDB species number for each class**
 
-We counted the GTDB species numbers for each class (131 taxa in total; 26 taxa of archaeal classes, 105 taxa of bacterial phyla or classes).
+We counted the GTDB species numbers for each class (132 taxa in total; 27 taxa of archaeal classes, 105 taxa of bacterial phyla or classes).
 
 [script] 14.count_species_num_for_each_class.pl
 
